@@ -1,0 +1,1 @@
+# twrp-device_alcatel_california
