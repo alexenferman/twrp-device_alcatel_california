@@ -10,9 +10,9 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 
 TARGET_PREBUILT_KERNEL := device/alcatel/california/prebuilt/zImage
-BOARD_MKBOOTIMG_ARGS := --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --mtk 1
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/alcatel/california/bootimg.mk
+BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
 BOARD_KERNEL_BASE := 0x10000000 # Maybe Needs Fixing
 BOARD_PAGE_SIZE := 2048
 BOARD_KERNEL_OFFSET := 0x00008000
