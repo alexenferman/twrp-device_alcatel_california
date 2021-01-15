@@ -13,9 +13,21 @@
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=6012 TARGET_DEVICE=california BUILD_FINGERPRINT="califronia-user 4.2.2 6012 alexenferman release-keys" PRIVATE_BUILD_DESC="alcatel/california/california:4.2.2/alexenferman/6012:user/release-keys"
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := omni_california
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Inherit from California device
+$(call inherit-product, device/alcatel/california/device.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := california
+PRODUCT_NAME := omni_california
 PRODUCT_BRAND := alcatel
+PRODUCT_MODEL := Alcatel One Touch Idol Mini 
 PRODUCT_MANUFACTURER := alcatel
-PRODUCT_MODEL := alcatel-6012
+PRODUCT_RELEASE_NAME := ALCATEL ONE TOUCH IDOL MINI
