@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter california, $(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
+ifeq ($(TARGET_DEVICE), )
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
