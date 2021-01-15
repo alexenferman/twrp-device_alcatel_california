@@ -1,3 +1,5 @@
+DEVICE_PATH := device/alcatel/california
+
 TARGET_BOOTLOADER_BOARD_NAME := california
 TARGET_NO_BOOTLOADER := true
 
