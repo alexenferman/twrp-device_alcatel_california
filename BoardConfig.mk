@@ -70,3 +70,4 @@ TW_EXCLUDE_TWRPAPP := true
 TW_NO_CPU_TEMP := true
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
+TW_EXCLUDE_AAPT := true
